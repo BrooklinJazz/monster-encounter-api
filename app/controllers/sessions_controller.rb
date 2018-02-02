@@ -8,7 +8,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       # current request and next request
       flash[:notice] = 'Thank you for sign in!'
-      redirect_to home_path
+      # TODO change the redirect
+      redirect_to users_path
     else
       # current request
       flash.now[:alert] = 'Wrong email or password!'
@@ -18,6 +19,11 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to home_path, notice: 'Signed Out!'
+    redirect_to users_path, notice: 'Signed Out!'
+  end
+
+  private
+  def session_params
+    params.require(:session).permit(:email, :password)
   end
 end

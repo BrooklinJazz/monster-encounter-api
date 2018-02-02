@@ -41,6 +41,7 @@ gem 'pry' # added in class
 gem 'pry-doc'# added in class then run bundle
 gem 'pry-rails' # replace irb in
 gem 'hirb'
+gem 'jwt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

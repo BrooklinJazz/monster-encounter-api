@@ -1,0 +1,19 @@
+<h1>Sign In</h1>
+<%= form_for :session, url: session_path do |f| %>
+  <% if @user.errors.present? %>
+    <p>
+      <%= @user.errors.full_messages.join(', ') %>
+    </p>
+  <% end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <%= f.submit 'Submit' %>
+<% end %>

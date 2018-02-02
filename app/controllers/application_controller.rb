@@ -17,4 +17,11 @@ class ApplicationController < ActionController::Base
     session[:user_id].present?
   end
   helper_method :user_signed_in?
+
+  private
+  def authenticate_user!
+    unless user_signed_in
+      redirect_to new_session_path, alert: 'You must sign in or sign up first!'
+    end
+  end
 end

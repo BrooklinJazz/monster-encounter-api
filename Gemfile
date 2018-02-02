@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Project Gems:
 ###############
 gem 'bcrypt', '~> 3.1.7'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'cowsay'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

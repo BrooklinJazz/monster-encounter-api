@@ -31,6 +31,19 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+###############
+# Project Gems:
+###############
+gem 'bcrypt', '~> 3.1.7'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'cowsay'
+gem 'pry' # added in class
+gem 'pry-doc'# added in class then run bundle
+gem 'pry-rails' # replace irb in
+gem 'hirb'
+gem 'jwt'
+gem 'rack-cors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

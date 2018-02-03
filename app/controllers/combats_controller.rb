@@ -10,6 +10,7 @@ class CombatsController < ApplicationController
   # GET /combats/1
   # GET /combats/1.json
   def show
+    render :json => @combat.fight
   end
 
   # GET /combats/new

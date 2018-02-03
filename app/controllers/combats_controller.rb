@@ -7,7 +7,9 @@ class CombatsController < ApplicationController
     # @combats = Combat.all
     if current_user
       @combats = current_user.combats
+      render :json => @combats
     else
+      # TODO change this redirect_to to be something api friendly
       redirect_to new_session_path
     end
   end

@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Fight</th>
       <th>User</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @combats.each do |combat| %>
       <tr>
+        <td><%= combat.id %></td>
         <td><%= combat.name %></td>
         <td><%= combat.fight %></td>
         <td><%= combat.user %></td>

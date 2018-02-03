@@ -1,16 +1,18 @@
-class CombatsController < ApplicationController
+class Api::V1::CombatsController < ApplicationController
   before_action :set_combat, only: [:show, :edit, :update, :destroy]
+  # add index to only
+  # before_action :set_user, only: [:index]
 
   # GET /combats
   # GET /combats.json
   def index
-    # @combats = Combat.all
-    if current_user
-      @combats = current_user.combats
+    # @user = @combate.user
+    @user = User.find(params[:user_id])
+    if true
+      @combats = @user.combats
       render :json => @combats
     else
-      # TODO change this redirect_to to be something api friendly
-      redirect_to new_session_path
+      # TODO flash alert notice with errors message
     end
   end
 
@@ -74,7 +76,6 @@ class CombatsController < ApplicationController
     def set_combat
       @combat = Combat.find(params[:id])
     end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def combat_params
       params.require(:combat).permit(:name, :fight, :user_id)

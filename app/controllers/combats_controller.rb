@@ -4,7 +4,12 @@ class CombatsController < ApplicationController
   # GET /combats
   # GET /combats.json
   def index
-    @combats = Combat.all
+    # @combats = Combat.all
+    if current_user
+      @combats = current_user.combats
+    else
+      redirect_to new_session_path
+    end
   end
 
   # GET /combats/1

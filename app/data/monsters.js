@@ -1,5 +1,4 @@
-export default function() {
-  return [
+[
 {
 "Name": "Aboleth",
 "Source": "Monster Manual",
@@ -25909,4 +25908,3 @@ export default function() {
 "Player": ""
 }
 ]
-}

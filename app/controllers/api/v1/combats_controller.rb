@@ -2,6 +2,7 @@ class Api::V1::CombatsController < ApplicationController
   before_action :set_combat, only: [:show, :edit, :update, :destroy]
   # add index to only
   # before_action :set_user, only: [:index]
+  skip_before_action :verify_authenticity_token
 
   # GET /combats
   # GET /combats.json
@@ -40,6 +41,7 @@ class Api::V1::CombatsController < ApplicationController
         format.html { redirect_to @combat, notice: 'Combat was successfully created.' }
         format.json { render :show, status: :created, location: @combat }
       else
+        binding.pry
         format.html { render :new }
         format.json { render json: @combat.errors, status: :unprocessable_entity }
       end

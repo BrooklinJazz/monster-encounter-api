@@ -38,10 +38,10 @@ class Api::V1::CombatsController < ApplicationController
 
     respond_to do |format|
       if @combat.save
-        format.html { redirect_to @combat, notice: 'Combat was successfully created.' }
+        # format.html { redirect_to @combat, notice: 'Combat was successfully created.' }
         format.json { render :show, status: :created, location: @combat }
       else
-        binding.pry
+        # binding.pry
         format.html { render :new }
         format.json { render json: @combat.errors, status: :unprocessable_entity }
       end
@@ -79,6 +79,9 @@ class Api::V1::CombatsController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def combat_params
-      params.require(:combat).permit(:name, :fight, :user_id)
+      params.require(:combat).permit(:name, :user_id, fight: [:Name, :Source, :Type, :currentHp, :InitiativeModifier, :HP => {}, :AC => {}, :Speed => [], :Abilities => {}, :DamageVulnerabilities => [], :DamageResistances => [], :DamageImmunities => [], :ConditionImmunities => [], :Saves => [], :Skills => [], :Senses => [], :Languages => [], :Challenge => "", :Traits => [], :Actions => [], :Reactions => [], :LegendaryActions => [], :Description => "", :Player => "", :currentHp => ""])
+      # params.require(:combat).permit(:)
+      # params.require(:combat).permit(:name, :user_id, :fight).permit!([:date => {}]) => [:data => {}])
+      # params.require(:fight).permit!
     end
 end

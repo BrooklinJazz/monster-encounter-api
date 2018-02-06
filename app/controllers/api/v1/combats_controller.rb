@@ -16,8 +16,7 @@ class Api::V1::CombatsController < ApplicationController
     end
   end
 
-  # GET /combats/1
-  # GET /combats/1.json
+  # GET user/:id/combats/1.json
   def show
     render :json => @combat.fight
   end

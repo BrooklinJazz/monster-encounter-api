@@ -22,6 +22,7 @@ monsterArrOfObj = [{
 "10 ft.",
 "swim 40 ft."
 ],
+"currentHp": 135,
 "Abilities": {
 "Str": 21,
 "Dex": 9,

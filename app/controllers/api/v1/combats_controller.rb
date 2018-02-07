@@ -38,8 +38,8 @@ class Api::V1::CombatsController < ApplicationController
 
     respond_to do |format|
       if @combat.save
-        # format.html { redirect_to @combat, notice: 'Combat was successfully created.' }
-        format.json { render :show, status: :created, location: @combat }
+        format.html { redirect_to @combat, notice: 'Combat was successfully Saved.' }
+        format.json { head :created }
       else
         # binding.pry
         format.html { render :new }

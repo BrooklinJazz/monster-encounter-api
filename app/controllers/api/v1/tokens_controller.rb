@@ -1,6 +1,8 @@
 class Api::V1::TokensController < Api::ApplicationController
   # Users make requests to this action with
   # their login information to receive a token (JWT).
+  # TODO create Token is not working because password_digest is not a valid hash
+  # error: BCrypt::Errors::InvalidHash (invalid hash)
   def create
     # 1. Find the user by their email
     user = User.find_by(email: params[:email])

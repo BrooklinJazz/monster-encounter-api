@@ -4,5 +4,5 @@ class Api::V1::MonstersController < ApplicationController
   def index
     # TODO fetch this json data. you may have to not export it as a function
     render :json => @@data
-   end
+  end
 end

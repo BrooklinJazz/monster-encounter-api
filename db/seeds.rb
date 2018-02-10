@@ -128,6 +128,25 @@ monsterArrOfObj = [{
 "Player": ""
 }]
 
+playerObj = {
+"Name": "David",
+"HP": {
+"Value": 135
+},
+"AC": {
+"Value": 17
+},
+"currentHp": 135,
+"Abilities": {
+"Str": 21,
+"Dex": 9,
+"Con": 15,
+"Int": 18,
+"Wis": 15,
+"Cha": 18
+}
+}
+
 PASSWORD = 'supersecret'
 
 # When Combat.destroy_all is after User, you will get an error:
@@ -163,6 +182,13 @@ end
   Combat.create(
     name: Faker::Name.first_name,
     fight: monsterArrOfObj,
+    user: User.all.sample
+  )
+end
+
+10.times.each do
+  Player.create(
+    stats: playerObj,
     user: User.all.sample
   )
 end

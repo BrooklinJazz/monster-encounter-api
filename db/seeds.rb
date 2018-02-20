@@ -147,7 +147,7 @@ playerObj = {
 }
 }
 
-PASSWORD = 'supersecret'
+PASSWORD = 'test'
 
 # When Combat.destroy_all is after User, you will get an error:
 # ERROR:  update or delete on table "users" violates foreign key constraint
@@ -160,9 +160,9 @@ Combat.destroy_all
 User.destroy_all
 
 super_user = User.create(
-  first_name: 'Jon',
-  last_name: 'Snow',
-  email: 'js@winterfell.gov',
+  first_name: 'Master',
+  last_name: 'Tester',
+  email: 'test@test.test',
   password: PASSWORD
 )
 

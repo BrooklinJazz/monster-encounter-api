@@ -31,8 +31,6 @@ class Api::V1::PlayersController < ApplicationController
   # POST /players.json
   def create
     @player = Player.new(player_params)
-    p @player
-    p player_params
 
     respond_to do |format|
       if @player.save

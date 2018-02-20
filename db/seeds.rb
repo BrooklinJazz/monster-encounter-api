@@ -128,7 +128,26 @@ monsterArrOfObj = [{
 "Player": ""
 }]
 
-PASSWORD = 'supersecret'
+playerObj = {
+"Name": "David",
+"HP": {
+"Value": 135
+},
+"AC": {
+"Value": 17
+},
+"currentHp": 135,
+"Abilities": {
+"Str": 21,
+"Dex": 9,
+"Con": 15,
+"Int": 18,
+"Wis": 15,
+"Cha": 18
+}
+}
+
+PASSWORD = 'test'
 
 # When Combat.destroy_all is after User, you will get an error:
 # ERROR:  update or delete on table "users" violates foreign key constraint
@@ -141,9 +160,9 @@ Combat.destroy_all
 User.destroy_all
 
 super_user = User.create(
-  first_name: 'Jon',
-  last_name: 'Snow',
-  email: 'js@winterfell.gov',
+  first_name: 'Master',
+  last_name: 'Tester',
+  email: 'test@test.test',
   password: PASSWORD
 )
 
@@ -163,6 +182,13 @@ end
   Combat.create(
     name: Faker::Name.first_name,
     fight: monsterArrOfObj,
+    user: User.all.sample
+  )
+end
+
+10.times.each do
+  Player.create(
+    stats: playerObj,
     user: User.all.sample
   )
 end

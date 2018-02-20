@@ -1,6 +1,6 @@
 # README
 
-This Api is responsible for handling the requests from battle-master-client.
+This Api is responsible for handling the requests from battle-master-client. For more information for to https://github.com/BrooklinJazz/battle-master-client
 
 ## Setup:
 ```
@@ -43,8 +43,21 @@ gem 'active_model_serializers'
 - belong to users
 
 ## Controllers
-### Combats
+### 1. Combats
 #### index
-gets all the combats that belong to a given user and returns the data as json
+retrieve all the combats that belong to a given user and returns the data as json. these can be found in the Save File section of the client.
 #### create
 saves a new combat
+#### show
+sends back the json for a combat of given id. used for retrieving saved combats
+### 2. Monsters
+#### index
+returns JSON for the monsters from the Monster Manual
+### 3. Players
+#### index
+retrieve all the players that belong to a given user and returns the data as json. these can be found in the Player Library of the client.
+### 4. Users
+#### CRUD
+### 5. Tokens
+#### create
+creates a new jwt token for a given user.

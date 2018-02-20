@@ -36,9 +36,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'cowsay'
-gem 'pry' # added in class
-gem 'pry-doc'# added in class then run bundle
-gem 'pry-rails' # replace irb in
+gem 'pry'
+gem 'pry-doc'
+gem 'pry-rails'
 gem 'hirb'
 gem 'jwt'
 gem 'rack-cors'

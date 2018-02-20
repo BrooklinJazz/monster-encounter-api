@@ -13,20 +13,6 @@ class Api::V1::PlayersController < ApplicationController
     end
   end
 
-  # GET /players/1
-  # GET /players/1.json
-  def show
-  end
-
-  # GET /players/new
-  def new
-    @player = Player.new
-  end
-
-  # GET /players/1/edit
-  def edit
-  end
-
   # POST /players
   # POST /players.json
   def create
@@ -38,20 +24,6 @@ class Api::V1::PlayersController < ApplicationController
         format.json { render :show, status: :created, location: @player }
       else
         format.html { render :new }
-        format.json { render json: @player.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /players/1
-  # PATCH/PUT /players/1.json
-  def update
-    respond_to do |format|
-      if @player.update(player_params)
-        format.html { redirect_to @player, notice: 'Player was successfully updated.' }
-        format.json { render :show, status: :ok, location: @player }
-      else
-        format.html { render :edit }
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end
     end

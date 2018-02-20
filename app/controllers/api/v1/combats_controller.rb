@@ -22,15 +22,6 @@ class Api::V1::CombatsController < ApplicationController
     render :json => @combat.fight
   end
 
-  # GET /combats/new
-  def new
-    @combat = Combat.new
-  end
-
-  # GET /combats/1/edit
-  def edit
-  end
-
   # POST /combats
   # POST /combats.json
   def create

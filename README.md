@@ -1,6 +1,6 @@
 # README
 
-This Api is responsible for handling the requests from battle-master-client. For more information for to https://github.com/BrooklinJazz/battle-master-client
+This Api is responsible for handling the requests from monster-encounter-client. For more information go to https://github.com/BrooklinJazz/monster-encounter-client
 
 ## Setup:
 ```
@@ -17,7 +17,7 @@ Open on localhost:3000
 go to https://github.com/BrooklinJazz/battle-master-client and follow the instructions for installing the client.
 ```
 
-## Project Gems:
+## Additional Project Gems:
 ```rb
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

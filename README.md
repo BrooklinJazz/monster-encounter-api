@@ -14,7 +14,7 @@ $ rails s
 
 Open on localhost:3000
 
-go to https://github.com/BrooklinJazz/battle-master-client and follow the instructions for installing the client.
+go to https://github.com/BrooklinJazz/monster-encounter-client and follow the instructions for installing the client.
 ```
 
 ## Additional Project Gems:

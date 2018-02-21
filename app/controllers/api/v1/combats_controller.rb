@@ -70,7 +70,7 @@ class Api::V1::CombatsController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def combat_params
-      params.require(:combat).permit(:name, :user_id, fight: [:Name, :Source, :Type, :currentHp, :Challenge, :Description, :Player, :InitiativeModifier, :HP => {}, :AC => {}, :Speed => [], :Abilities => {}, :DamageVulnerabilities => [], :DamageResistances => [], :DamageImmunities => [], :ConditionImmunities => [], :Senses => [], :Languages => [], :Reactions => [], :Saves => [:Name, :Modifier], :Skills => [:Name, :Modifier], :Traits => [:Name, :Content, :Usage], :Actions => [:Name, :Content, :Usage], :LegendaryActions => [:Name, :Content, :Usage]])
+      params.require(:combat).permit(:name, :user_id, fight: [:Name, :Source, :Type, :currentHp, :Challenge, :Description, :Player, :InitiativeModifier, :InitiativeRoll, :HP => {}, :AC => {}, :Speed => [], :Abilities => {}, :DamageVulnerabilities => [], :DamageResistances => [], :DamageImmunities => [], :ConditionImmunities => [], :Senses => [], :Languages => [], :Reactions => [], :Saves => [:Name, :Modifier], :Skills => [:Name, :Modifier], :Traits => [:Name, :Content, :Usage], :Actions => [:Name, :Content, :Usage], :LegendaryActions => [:Name, :Content, :Usage]])
       # params.require(:combat).permit(:)
       # params.require(:combat).permit(:name, :user_id, :fight).permit!([:date => {}]) => [:data => {}])
       # params.require(:fight).permit!
